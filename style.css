@@ -121,3 +121,20 @@ img {
     margin: 0 auto;
     max-width: 100%;
 }
+
+/*
+Block: header, section, p.
+Inline: a, span, label.
+
+Inline: width/height nestrādā.
+Inline-block: width/height strādā.
+
+img vajag display: block, lai margin: 0 auto centrētu attēlu.
+
+display: none - elements un tā vieta pazūd.
+visibility: hidden - elements pazūd, bet vieta paliek.
+
+Block: jauna rinda, width/height strādā, platums - pieejamais.
+Inline: nav jaunas rindas, width/height nestrādā, platums - saturs.
+Inline-block: nav jaunas rindas, width/height strādā, platums - saturs.
+*/
