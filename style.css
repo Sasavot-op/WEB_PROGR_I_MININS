@@ -56,16 +56,6 @@ nav ul {
     margin: 0;
 }
 
-/*
-N5 noteikums:
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-Flexbox gap aizstāj N5 atstarpes.
-*/
-
 nav a {
     color: white;
     text-decoration: none;
@@ -74,15 +64,6 @@ nav a {
 nav a:hover {
     color: lightblue;
 }
-
-/*
-justify-content:
-flex-start - elementi sākumā.
-center - elementi centrā.
-space-between - brīva vieta starp elementiem.
-space-around - brīva vieta ap elementiem.
-Bez papildu platuma atšķirība var nebūt redzama.
-*/
 
 main {
     max-width: 900px;
@@ -121,21 +102,6 @@ section {
     min-width: 0;
 }
 
-/*
-align-items: stretch - elementi izstiepjas.
-align-items: flex-start - elementi augšā.
-align-items: center - elementi centrā.
-
-justify-content darbojas pa galveno asi.
-align-items darbojas pa šķērsasi.
-
-flex: 1 1 220px:
-1 - elements var augt.
-1 - elements var sarukt.
-220px - sākuma izmērs.
-Teksts pārlec zem attēla, ja nepietiek vietas.
-*/
-
 .poga {
     display: inline-block;
     padding: 10px 15px;
@@ -153,16 +119,6 @@ input[type="email"] {
     background-color: lightyellow;
     border: 2px solid orange;
 }
-
-/*
-N5 formas noteikumi:
-label { display: block; }
-input, textarea {
-    display: block;
-    width: 250px;
-}
-button { display: block; }
-*/
 
 form {
     display: flex;
@@ -182,19 +138,50 @@ form button {
     padding: 8px 15px;
 }
 
+.galerija {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.galerija img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    min-width: 0;
+}
+
+.galerija .liela {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    height: 100%;
+}
+
 /*
-Formas lauki ir vienā platumā,
-jo flex-direction: column un align-items: stretch
-izstiepj tos šķērsass virzienā.
+Rindas veidojas automātiski, jo Grid izvieto attēlus.
 
-row - galvenā ass horizontāla,
-šķērsass vertikāla.
+fr sadala pieejamo brīvo vietu.
+200px kolonnas ir fiksētas un mazā ekrānā pārplūst.
 
-column - galvenā ass vertikāla,
-šķērsass horizontāla.
+aspect-ratio nosaka attēla proporciju.
+object-fit: cover aizpilda laukumu un apgriež malas.
 
-justify-content - galvenā ass.
-align-items - šķērsass.
+auto-fit pielāgo kolonnu skaitu.
+150px ir minimālais platums, 1fr sadala brīvo vietu.
+
+auto-fit tukšās kolonnas sakļauj.
+auto-fill tukšās kolonnas saglabā.
+
+Lielais attēls aizņem 2 kolonnas un 2 rindas.
+Pārējie attēli izvietojas brīvajās šūnās.
+Flexbox nav paredzēts šādam divdimensiju režģim.
+
+Navigācijai, vizītkartei un formai izmanto Flexbox,
+jo elementi tiek kārtoti vienā virzienā.
+Galerijai izmanto Grid, jo vajag rindas un kolonnas.
 */
 
 footer {
