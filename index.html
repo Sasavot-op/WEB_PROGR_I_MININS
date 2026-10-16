@@ -1,43 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="lv">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mana profila lapa</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <h1 id="galvenais" class="izcelts">Mana profila lapa</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#par-mani">Par mani</a></li>
+            <li><a href="#prasmes">Prasmes</a></li>
+            <li><a href="#kontakti">Kontakti</a></li>
+        </ul>
+    </nav>
 </header>
 
-<nav>
-    <ul>
-        <li><a href="#par-mani">Par mani</a></li>
-        <li><a href="#prasmes">Prasmes</a></li>
-        <li><a href="#kontakti">Kontakti</a></li>
-    </ul>
-</nav>
-
 <main>
-
     <section id="par-mani">
         <h2 class="izcelts">Par mani</h2>
 
-        <img src="notebook.png"
-            alt="Mans profila attēls"
-            width="200">
+        <article class="vizitkarte">
+            <img src="notebook.png" alt="Mans profila attēls" width="160">
 
-        <span class="display-test">Programmēšana</span>
-
-        <article class="kartite">
-            <h3>Īsi par mani</h3>
-            <p class="izcelts">
-                Mani sauc Gļebs. Es mācos IT jomā.
-                Mani interesē programmēšana, datorspēles
-                un tīmekļa izstrāde.
-            </p>
+            <div class="vizitkarte-teksts">
+                <h3>Gļebs</h3>
+                <p>IT students un programmēšanas entuziasts.</p>
+                <p>Man patīk programmēšana, datorspēles un tīmekļa izstrāde.</p>
+                <a href="#kontakti" class="poga">Sazināties</a>
+            </div>
         </article>
     </section>
 
@@ -49,17 +45,14 @@
                 <th>Prasme</th>
                 <th>Līmenis</th>
             </tr>
-
             <tr>
                 <td>HTML</td>
                 <td>Labs</td>
             </tr>
-
             <tr>
                 <td>CSS</td>
                 <td>Vidējs</td>
             </tr>
-
             <tr>
                 <td>C++</td>
                 <td>Vidējs</td>
@@ -74,22 +67,15 @@
             <label for="name">Vārds:</label>
             <input type="text" id="name" name="name">
 
-            <br><br>
-
             <label for="email">E-pasts:</label>
             <input type="email" id="email" name="email">
-
-            <br><br>
 
             <label for="message">Ziņa:</label>
             <textarea id="message" name="message"></textarea>
 
-            <br><br>
-
             <button type="submit">Nosūtīt</button>
         </form>
     </section>
-
 </main>
 
 <footer>
